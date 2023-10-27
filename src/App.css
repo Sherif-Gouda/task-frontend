@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
   height: 40vmin;
@@ -27,12 +25,200 @@
 .App-link {
   color: #61dafb;
 }
+.Task-List {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10vh;
+}
+.Task {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0.25rem;
+  padding-left: 0.50rem;
+  position: relative;
+  width: 60vw;
+  height: fit-content;
+  background-color: white;
+  border-radius: 5px;
+}
+.Task div h3{
+  color: aqua;
+  margin: 1px;
+}
+.Task div p{
+  font-weight: 600;
+  margin-top: 1px;
+}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Task-Container{
+  background-color: white;
+  padding-top: 0px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-top: 8px;
+  padding-bottom: 3px;
+}
+.Task-List{
+  margin-bottom: 30px;
+}
+.btn{
+  border-radius: 10px;
+  padding: 3px 10px;
+  margin-left: 2px;
+  border: none;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+.btn-edit{
+  background-color: rgb(240, 139, 24);
+}
+.btn-del{
+  background-color: red;
+}
+.btn:hover{
+  cursor: pointer;
+}
+
+.task-form {
+  padding: 0px 30px 25px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.task-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.task-form input,
+.task-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.task-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background-color: #0056b3;
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.search-input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-left: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+.button-panel {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 30vw;
+  
+}
+
+.add-task-button {
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.all-tasks-button {
+  /* Add your custom styles for the "All Tasks" button here */
+  color: #ffffff;
+  background-color: #2f2f2f;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.all-tasks-button:hover {
+  background-color: #4c4c4c;
+}
+
+.add-task-button:hover {
+  background-color: rgb(32, 170, 32);
+}
+
+@media (max-width: 830px) {
+  .Task {
+    width: 95%; /* Set the width to 100% for small screens */
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width: 830px) {
+  .Task-Container {
+    width: 95%; /* Set the width to 100% for small screens */
+  }
+}
+
+@media (min-width:830px) and(max-width: 1060px) {
+  .Task {
+    width: 85%;
+  }
+}
+@media (min-width:830) and(max-width: 1060px) {
+  .Task-Container {
+    width: 85%;
+  }
+}
+@media (max-width: 768px) {
+  .Buttons{
+    display: flex;
+    flex-direction: column;
+    height: 10vw;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 768px) {
+  .button-panel{
+   width: 50vw;
   }
 }
